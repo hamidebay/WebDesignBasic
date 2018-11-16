@@ -1,0 +1,44 @@
+div div {
+    width: 100px;
+    height: 100px;
+    border-style: solid;
+    float: left;
+    display: flex;
+    opacity: 0.9;
+    border-width: thin;
+    font-size: 60px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.eins {
+    float: left;
+    clear: both;
+
+}
+
+.zwei {
+    float: left;
+    clear: both;
+}
+
+.eins :nth-child(2n) {
+    background-color: grey;
+}
+
+.zwei :nth-child(2n+1) {
+    background-color: grey;
+}
+
+.eins:first-child {
+    border-top: 4px solid black;
+}
+
+.zwei:last-child {
+    border-bottom: 4px solid black;
+}
+
+div>div:first-child{border-left: 4px solid black;}
+div>div:last-child{border-right: 4px solid black;}

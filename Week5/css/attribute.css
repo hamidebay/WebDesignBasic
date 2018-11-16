@@ -1,0 +1,85 @@
+div[class="bold"] {
+    color: blue;
+    font-weight: bold;
+}
+
+p[class="bolder"] {
+    font-weight: bold;
+}
+
+span[class="123boldeschk"] {
+    color: red;
+}
+
+span[class="orbold"] {
+    font-size: bolder;
+}
+
+p[class="boldest123"] {
+    color: green;
+    font-weight: bold;
+}
+
+p[class="boldesty"] {
+    border-style: solid;
+    border-width: bold;
+    border-color: red;
+}
+
+p[class="boldery123"] {
+    color: green;
+    font-weight: bold;
+}
+
+p[class="boldeste"] {
+    font-weight: bold;
+}
+
+span[class="allaboldo"] {
+    font-weight: bolder;
+
+}
+
+p[class="bolderu"] {
+    border-style: solid;
+    border-width: bold;
+    border-color: red;
+
+}
+
+p[class="123boldara"] {
+    font-weight: bold;
+    color: red;
+}
+
+p[ class="boldette123"] {
+    font-weight: bold;
+    color: green;
+}
+
+p[class="boldetti"] {
+    font-weight: bold;
+}
+
+span[class="boldek-boldeko"] {
+    color: orange;
+}
+
+div[class="boldek moldek"] {
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+}
+
+/*
+eigene Regeln */
+
+span[class="allaboldo"] {
+    border-style: dotted;
+    border-width: bold;
+    border-color:black;
+}
+
+span[class="boldek-boldeko"] {
+    font-size: 20px;
+}

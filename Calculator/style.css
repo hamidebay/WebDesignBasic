@@ -1,0 +1,13 @@
+.aussen {
+    width: 20%;
+    height: 30%;
+}
+
+
+.display {
+    display: flex;
+    justify-content: flex-end;
+    background-color: gray;
+    color: white;
+    width: 95%;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Calculator</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <center>
+        <table border="4" class="aussen">
+            <tr>
+                <td colspan="1">
+                    <input class="display" type="text" name="Display">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="innen">
+                        <tr>
+                            <td class="intern">
+                                <input class="calc-btn" data-role="number" type="button" value="7">
+                            </td>
+                            <td class="intern" >
+                                <input class="calc-btn" data-role="number" type="button" value="8">
+                            </td>
+                            <td class="intern">
+                                <input class="calc-btn" data-role="number" type="button" value="9">
+                            </td>
+                            <td class="intern">
+                                <input class="calc-btn" data-role="operator" type="button" value="+">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="intern">
+                                <input class="calc-btn" data-role="number" type="button" value="4">
+                            </td>
+                            <td class="intern" >
+                                <input class="calc-btn" data-role="number" type="button" value="5">
+                            </td>
+                            <td class="intern" >
+                                <input class="calc-btn" data-role="number" type="button" value="6">
+                            </td>
+                            <td class="intern">
+                                <input class="calc-btn" data-role="operator" type="button" value="-">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="intern">
+                                <input class="calc-btn" data-role="number" type="button" value="1">
+                            </td>
+                            <td class="intern">
+                                <input class="calc-btn" data-role="number" type="button" value="2">
+                            </td>
+                            <td class="intern">
+                                <input class="calc-btn" data-role="number" type="button" value="3">
+                            </td>
+                            <td class="intern">
+                                <input class="calc-btn" data-role="operator" type="button" value="*">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="intern">
+                                <input class="clear-btn" type="button" value="C">
+                            </td>
+                            <td >
+                                <input class="calc-btn" data-role="number" type="button" value="0">
+                            </td>
+                            <td>
+                                <input class="calculate-btn" type="button" value="=">
+                            </td>
+                            <td>
+                                <input class="calc-btn" data-role="operator" type="button" value="/">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </center>
+</body>
+
+</html>

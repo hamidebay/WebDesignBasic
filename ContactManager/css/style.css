@@ -1,0 +1,72 @@
+main {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: space-around;
+    font-size: 12px;
+}
+
+#left{
+    width: 30%;
+}
+
+#right form div{
+    width: 30%;
+    flex-direction: column;
+    
+}
+
+#select{
+    width: 100px;
+}
+nav{
+    display: flex;
+    height: 20px;
+}
+
+#add {
+    background-color: lightgreen;
+    width: 70px;
+    margin-left: 10px;
+    font-size: 10px;
+}
+
+#save {
+    
+    background-color: rgb(61, 88, 243);
+    margin-top: 50px;
+    height: 20px;
+    width: 50px;
+}
+
+#delete {
+    
+    background-color: red;
+    margin-top: 50px;
+    margin-left: 20px;
+    height: 20px;
+    width: 50px;
+}
+
+
+
+
+.label {
+    width: 100px;
+}
+#button{
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-end;
+   
+}
+
+input{
+    margin-right: 0px;
+    width: 150px;
+
+}
+tr {
+    display: flex;
+}
+

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kontakt Manager</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js" ></script>
+      
+    
+      
+
+
+</head>
+
+<body>
+    <main>
+        <section id="left">
+            <nav><input id="select" type="search" placeholder="Search">
+                <button id="add">Yeni Kayit</button></nav>
+
+            <table>
+                <thead>
+                    <tr>
+                        <div id="table">
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Email</th></div>
+                        <td></td>
+                     
+                    </tr>
+                </thead>
+            </table>
+        </section>
+        <section id="right">
+            <form>
+                <label class="label" for="">Firstname</label>
+                <input id="firstname">
+                <br>
+                <label class="label" for="">Lastname</label>
+                <input id="lastname">
+                <br>
+                <label class="label" for="">Email</label>
+                <input id="Email">
+                <br>
+                <label class="label" for="">Phone</label>
+                <input id="Phone1">
+                <br>
+                <label class="label" for="">Phone</label>
+                <input id="Phone2">
+                <br>
+            </form>
+            <div id="button">
+                <button id="save">kaydet</button></nav>
+                <button id="delete">sil</button></nav>
+            </div>
+        </section>
+    </main>
+
+    <script src = "js/contact.js"></script>
+    <script src = "js/storage.js"></script>
+    <script src = "js/controller.js"></script>
+
+</body>
+
+</html>

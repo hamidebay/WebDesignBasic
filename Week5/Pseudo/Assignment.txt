@@ -1,0 +1,5 @@
+1) Studieren Sie das HTML
+2) Definieren Sie mit Pseudoselektoren Regeln, die die entsprechenden Knoten (Elemente) wie im HTML angegeben stylen
+3) Definieren Sie mindestens 2 eigene Regeln mit Kindselektoren
+4) Sie dürfen das HTML nicht modifizieren!
+5) Sie dürfen Hiearchieselektoren und Pseudoselektoren verwenden!

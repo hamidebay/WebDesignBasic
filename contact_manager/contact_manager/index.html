@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IT club - Contact Manager</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <main>
+
+        <section>
+            <nav>
+                <input type="search" />
+                <button>Yeni Kayit</button>
+            </nav>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Buraya kayitli contact lar yerlestirilecek -->
+                </tbody>
+            </table>
+        </section>
+
+    
+        <section>
+            <form>
+                <label for="firstname">Firstname</label>
+                <input id="firstname" />
+                <br>
+                <label for="lastname">Lastname</label>
+                <input id="lastname" />
+                <br>
+                <label for="">Email</label>
+                
+            </form>        
+        </section>
+    </main>
+
+    <script src="js/model.js"></script>
+    <script src="js/controller.js"></script>
+</body>
+
+</html>

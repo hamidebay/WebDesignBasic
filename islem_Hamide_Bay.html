@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>islem</title>
+
+</head>
+
+
+<body>
+    <script>
+        let ersteZahl = prompt("erste Zahl");
+        let zweiteZahl = prompt("zweite Zahl");
+        let operator = prompt("yapmak istediginiz islem");
+        let result = 0;
+
+        function operasyon() {
+            if (operator == "+") {
+                result = ersteZahl + zweiteZahl;
+            } else if (operator == "-") {
+                result = ersteZahl - zweiteZahl;
+            } else if (operator == "/") {
+                result = ersteZahl / zweiteZahl;
+            } else if (operator == "*") {
+                result = ersteZahl * zweiteZahl;
+            } else {
+                result = "ungültige Eingabe";}
+
+                return result;
+
+            
+        }
+
+            console.log("Resultat ist: ", operasyon());
+
+         
+    </script>
+</body>
+
+</html>

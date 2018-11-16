@@ -1,0 +1,29 @@
+header {
+    border: solid 1 px;
+    background-color: #3E5B99;
+    height: 100px;
+    width: 100%;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: flex-start;
+    width: 400px;
+}
+
+.container {
+    float: right;
+    color: white;
+    margin-top: 13px;
+}
+
+.login-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 600px;
+}
+
+
+
+
+

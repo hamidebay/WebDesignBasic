@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+  
+    <title>burc</title>
+
+</head>
+
+
+<body>
+    <script>
+        let month = 5; // mart ayi
+        let day = 5; //ayin 12. günp
+        let horoscope = null;
+
+        /* 21 Mart-19 Nisan: koc
+           20 Nisan- 20 Mayis: boga
+           21 Mayis- 21 Haziran: ikizler
+           22 Haziran - 22 Temmuz: yengec
+           23 Temmuz - 22 Agustos: aslan
+           23 Agustos - 22 Eylül: basak
+           23 Eylül - 22 Ekim : Terazi
+           23 Ekim - 21 Kasim : akrep
+           22 Kasim - 21 Aralik : yay
+           22 Aralik - 19 Ocak : oglak
+           20 Ocak - 18 Subat : kova
+           19 Subat - 20 Mart : balik
+
+           */
+
+        if ((month == 3 && day >= 21) || (month == 4 && day <= 19)) {
+            horoscope = "Koc";
+        } else if ((month == 4 && day >= 20) || (month == 5 && day <= 20)) {
+            horoscope = "Boga";
+        } else if ((month == 5 && day >= 21) || (month == 6 && day <= 21)) {
+            horoscope = "Ikizler";
+        } else if ((month == 6 && day >= 22) || (month == 7 && day <= 22)) {
+            horoscope = "Yengec";
+        } else if ((month == 7 && day >= 23) || (month == 8 && day <= 22)) {
+            horoscope = "Aslan";
+        } else if ((month == 8 && day >= 23) || (month == 9 && day <= 22)) {
+            horoscope = "Basak";
+        } else if ((month == 9 && day >= 23) || (month == 10 && day <= 22)) {
+            horoscope = "Terazi";
+        } else if ((month == 10 && day >= 23) || (month == 11 && day <= 21)) {
+            horoscope = "Akrep";
+        } else if ((month == 11 && day >= 22) || (month == 12 && day <= 21)) {
+            horoscope = "Yay";
+        } else if ((month == 12 && day >= 22) || (month == 1 && day <= 19)) {
+            horoscope = "Oglak";
+        } else if ((month == 1 && day >= 20) || (month == 2 && day <= 18)) {
+            horoscope = "Kova";
+        } else if ((month == 2 && day >= 19) || (month == 3 && day <= 20)) {
+            horoscope = "Balik";
+        }
+        else{
+            horoscope = "at";
+        }
+
+        console.log("your horoscpe is: ", horoscope,  " burcu");
+    </script>
+</body>
+
+</html>

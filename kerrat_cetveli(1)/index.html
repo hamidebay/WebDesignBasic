@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IT Club - Kerrat Cetveli</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <main>
+        <nav>
+            <fieldset>
+                <legend>Genel Ayarlar</legend>
+                <input id="isim" name="isim" value="Nurullah" placeholder="Cocugun Ismi"/> <br>
+                <input id="toplamAlistirmaSayisi" name="toplamAlistirmaSayisi" value="30" placeholder="Toplam Alistirma Sayisi"/> <br>
+                <input id="tekAlistirmaSueresi" name="tekAlistirmaSueresi" value="1.5" placeholder="Alistirma Süresi"/> <br>
+            </fieldset>
+            <fieldset>
+                <legend>Birinci Carpan</legend>
+                <input id="BC_min" name="BC_min" value="2" placeholder="Mimimum Deger"/>
+                <input id="BC_max" name="BC_max" value="9" placeholder="Maximum Deger"/>
+            </fieldset>
+            <fieldset>
+                <legend>Ikinci Carpan</legend>
+                <input id="IC_min" name="IC_min" value="5" placeholder="Mimimum Deger"/>
+                <input id="IC_max" name="IC_max" value="8" placeholder="Maximum Deger"/>
+            </fieldset>
+            
+            
+            <time>...</time> 
+            
+            <dialog id="sonuc_modal">
+                <fieldset>
+                    <legend>Rapor</legend>
+                    <div id="current_result">
+                     
+                            <table>
+                                    
+                                </table>
+                    </div>
+                </fieldset>
+            </dialog>
+
+            <dialog id="raport_modal">
+                
+            </dialog>
+            
+            <br><br>
+
+            <button class="Baslat">Baslat</button> <br>
+            <button class="Bitir">Bitir</button>
+            <button class="GenelRapor">Genel Rapor</button> <br>
+        </nav>
+        <section class="alistirma_container">
+
+            <div>
+                <label>6 x 7</label>:
+                <input id="alistirma_1" />
+            </div>
+
+        </section>
+    </main>
+
+    
+    <script src="js/model.js"></script>
+    
+    <script src="js/storage.js"></script>
+    <script src="js/alistirma.js"></script>
+    <script src="js/rapor.js"></script>
+
+    <script src="js/controller.js"></script>
+</body>
+</html>
+

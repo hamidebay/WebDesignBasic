@@ -1,0 +1,19 @@
+#display{
+    border: 1px solid black;
+    width: 150px;
+    height: 20px;
+
+}
+
+button{
+    margin-top: 20px;
+    float: right;
+
+}
+
+div{
+    border: 1px solid grey;
+    width: 200px;
+    height: 200px;
+    padding: 5%;
+}

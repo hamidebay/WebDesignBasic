@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>operations</title>
+
+    <p id="demo"></p>
+    <script>
+        let resultAddition =  0;
+        let resultSubtraction = 0;
+        let resultDivision = 0;
+        let resultMultiplication = 0;
+        let resultPotenz=0;
+        let zahl1 = prompt("Zahl1 eingeben", "Zahl1 eingeben");
+        let zahl2 = prompt("Zahl2 eingeben", "Zahl2 eingeben");
+
+        function addition() {
+
+             resultAddition = +zahl1 + +zahl2;
+
+            return resultAddition;
+
+        }
+
+        function subtraction() {
+
+            resultSubtraction = zahl1 - zahl2;
+
+            return resultSubtraction;
+
+        }
+
+        function division() {
+
+            resultDivision = zahl1 / zahl2;
+
+            return resultDivision;
+
+        }
+
+        function multiplication() {
+
+            resultMultiplication = zahl1 * zahl2;
+
+            return resultMultiplication;
+
+        }
+
+        function potenz(){
+            resultPotenz= Math.pow(zahl1, zahl2);
+
+            return resultPotenz;
+
+        }
+
+        document.write("erste Zahl ist:"+" "+zahl1+"        "+"zweite Zahl ist"+" "+zahl2);
+        document.write("<br>");
+        document.write("<br>");
+        addition();
+        document.write("Resultat Addition:" + " " + resultAddition+ '\n');
+        document.write("<br>");
+        subtraction();
+        document.write("Resultat Subtraction:" + " " + resultSubtraction+'\n');
+        document.write("<br>");
+        division();
+        document.write("Resultat Division:" + " " + resultDivision + '\n');
+        document.write("<br>");
+        multiplication();
+        document.write("Resultat Multiplication:" + " " + resultMultiplication+ '\n');
+        document.write("<br>");
+        potenz();
+        document.write("Resultat Potenz:"+ " "+ resultPotenz);
+
+ 
+    </script>
+
+</head>
+
+<body>
+
+
+</body>

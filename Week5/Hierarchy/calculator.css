@@ -1,0 +1,91 @@
+#flexContainer {
+    display: flex;
+   
+    border: solid 1px black;
+    width: 30%;
+    height: 20%;
+    background-color: lightgray;
+}
+#result{
+    background-color: rgb(41, 80, 94);
+    width: 200px;
+    height:50px ;
+}
+.zeile1 {
+    display: flex;
+    border: solid 1px black;
+ 
+    width: 30%;
+    height:20% ;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    
+  
+}
+
+.zeile2 {
+    display: flex;
+    border: solid 1px black;
+    flex-wrap: wrap;
+    width: 30%;
+    height:20% ;
+
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: flex-start;
+  
+
+}
+
+.zeile3 {
+    display: flex;
+    border: solid 1px black;
+    flex-wrap: wrap;
+    width: 30%;
+    height:20% ;
+
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+
+textarea {
+    display: flex;
+  
+    height: 20%;
+    width: 100%;
+  
+    
+}
+
+#null {
+    display: flex;
+    border: solid 1px black;
+
+    height: 20%;
+    width: 80%;
+
+}
+
+#gleich {
+    display: flex;
+    border: solid 1px black;
+    width: 100%;
+    height: 20%;
+    align-self: flex-end;
+    
+    
+}
+
+#operand div{
+    display: flex;
+    border: solid 1px black;
+    height: 20%;
+    widows: 15%;; 
+
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript - Sayi Cevirici</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <script src="js/model.js"></script>
+    <script src="js/modelEN.js"></script>
+    <script src="js/controller.js"></script>
+</head>
+
+<body>
+    <div>
+        <p>Sayiyi giriniz!</p>
+        <label for="input">input:
+        </label>
+        <input id="input" class="form-control" type="number"/>
+        <select id="languages" name="languages" data-size="2">
+                <option value="select_languages:">Select languages</option>
+                <option value="türkce" id="tr">türkce</option>
+                <option value="english" id="en">english</option>
+                </select>
+        <p>Sayinin yazilimi:</p>
+        <section id="output"></section>
+        <button id="calculate_btn">Cevir</button>
+        
+    </div>
+ 
+</body>
+
+</html>
+
+<!----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number Counter</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="js/model.js"></script>
+    <script src="js/controller.js"></script>
+
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row mt-4">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <label for="input">Input:</label>
+            <input id="input" class="form-control" type="number"/>
+            <button id="calculate_btn" class="btn btn-primary mt-4">Calculate</button>
+            <hr>
+            <p>Your Output:</p>
+            <p id="output"></p>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>
+
+</body>
+</html>
+
+-->

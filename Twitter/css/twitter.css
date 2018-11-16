@@ -1,0 +1,136 @@
+body {
+    display: flex;
+    background-color: #e6ecf0;
+    font-size: 14px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 0;
+    height: 48px;
+    background-color: white;
+    border-top: 0;
+}
+
+button {
+    background-color: #1da1f2;
+    border-radius: 20px;
+    height: 35px;
+    width: 90px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    align-content: center;
+    margin-top: 6px;
+    margin-left: 10px;
+}
+
+.hd {
+    display: flex;
+    justify-content: space-around;
+    width: 1190px;
+}
+
+.menü {
+    display: flex;
+    flex-direction: row;
+}
+
+#lg {
+    display: flex;
+    justify-content: center;
+    width: 21px;
+    height: 16px;
+    color: #1da1f2;
+    align-content: center;
+}
+
+.right-side {
+    display: flex;
+    justify-content: flex-end;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    width: 1190px;
+    margin-top: 10px;
+    margin-left: 90px;
+}
+
+section {
+    display: flex;
+    justify-content: flex-start;
+    width: 290px;
+    flex-direction: column;
+}
+
+article {
+    display: flex;
+    justify-content: center;
+    width: 590px;
+    background-color: white;
+    font-family: Segoe UI, Arial, sans-serif;
+    border: 1px solid #e6ecf0;
+    margin-left: 10px;
+    margin-right: 10px;
+    flex-direction: column;
+}
+
+aside {
+    display: flex;
+    justify-content: flex-end;
+    background-color: white;
+    width: 290px;
+    border: 1px solid #e6ecf0;
+}
+
+section>div {
+    border: 1px solid #e6ecf0;
+    margin-bottom: 10px;
+    background-color: #fff;
+    padding: 15px;
+}
+
+#suchen {
+    border-radius: 20px;
+    height: 35px;
+    border: 1px solid #e6ecf0;
+    width: 222px;
+    margin-top: 6px;
+    padding-left: 20px;
+    border-right: 10px;
+    background-color: #F5F8FA;
+}
+
+.men {
+    background-color: transparent;
+    width: 120px;
+    border: none;
+    font-weight: bold;
+    padding: 0 14px 0 4px;
+    font-size: 13px;
+    color: #657786;
+}
+
+i {
+    margin-left: 5px;
+}
+
+#neuigkeiten {
+    width: 508px;
+    background-color: white;
+    color: #7fcaf8;
+    height: 38px;
+    font-weight: bold;
+}
+
+#middle-section {
+    background-color: #e8f5fd;
+    margin-top: 0;
+    height: 60px;
+}

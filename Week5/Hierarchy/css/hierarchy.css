@@ -1,0 +1,102 @@
+.firstClass {
+    background-color: black;
+    color: white;
+}
+
+div:nth-child(2) p {
+    color: skyblue;
+}
+
+
+
+div:nth-child(3) p:first-child {
+    color: skyblue;
+}
+
+
+div:last-child p:nth-child(5n) {
+    color: skyblue;
+}
+
+div:last-child p:nth-child(6n) {
+    color: skyblue;
+}
+
+div:last-child p:nth-child(7n) {
+    color: skyblue;
+}
+
+div:last-child p:nth-child(8n) {
+    color: skyblue;
+}
+
+span span:nth-child(1) {
+    border-style: solid;
+    border-color: black;
+}
+
+#middle {
+    border: solid 2px red;
+}
+
+#middle span {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+
+#middle + p {
+    color: darkred;
+}
+
+#someDiv {
+    color: skyblue;
+}
+
+#someDiv p:nth-child(3) {
+    color: darkred;
+}
+
+#someDiv p span {
+    background-color: black;
+    font-size: XX;
+    color: white;
+}
+
+.someL ul {
+    font-size: 20px;
+}
+
+.someL li {
+    font-size: 20px;
+}
+
+.someL ul li ul {
+    font-size: 40px;
+}
+
+.someL li {
+    color: red;
+    font-style: italic;
+    font-size: 40px;
+}
+
+.someL ul li p {
+    color: orange;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.someL ul li ul li:nth-child(2) {
+    color: blue;
+    font-size: 40px;
+}
+
+.someL ul li ul li:nth-child(3) {
+    color: green;
+    font-size: 40px;
+}
+
+div ul li span {
+    color: orange;
+}

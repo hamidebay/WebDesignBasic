@@ -1,0 +1,61 @@
+#flexContainer {
+    display: flex;
+    flex-basis: 400px;
+    width: 370px;
+    height: 210px;
+    background-color: lightgray;
+
+}
+
+textarea {
+    width: 355px;
+    flex-wrap: wrap;
+    height: 30px;
+    text-align: right;
+    font-weight: bold;
+}
+
+div {
+    flex-wrap: wrap;
+    border: solid 1px;
+    height: 30px;
+    width: 100px;
+
+    align-content: flex-start;
+    text-align: center;
+    background-color: lightgreen
+}
+
+.op {
+    width: 50px;
+    justify-content: flex-end;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 31px;
+    margin-left: 5px;
+    text-align: center;
+    justify-content: center;
+    background-color: lightpink;
+}
+
+#gleich {
+    width: 360px;
+    flex-wrap: wrap;
+    height: 30px;
+    background-color: lightpink;
+    margin-top: 3px;
+}
+
+#null {
+    width: 303.5px;
+    margin-top: -11px;
+
+}
+
+.zeile2 {
+    margin-top: -5px;
+}
+
+.zeile3 {
+    margin-top: -10px;
+}

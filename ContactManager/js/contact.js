@@ -4,7 +4,7 @@ let Email = null;
 let Phone1 = null;
 let Phone2 = null;
 
-//test 2
+//Array zum testen der Funktionen
 let contacts = ["hamide", "bay", "tuncay", "ebrar", "erhan", "erhan"];
 
 function deleteContact(isim) {
@@ -21,8 +21,8 @@ function updateContact(person) {
 
 }
 
-function sortContacts(kontakt) {
-    kontakt.sort();
+function sortContacts(contacts) {
+    contacts.sort();
     return contacts;
 }
 

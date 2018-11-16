@@ -21,85 +21,88 @@ UI Interactions:
 
 $(document).ready(() => {
 
-            function veriAl() {
-                let isim = $('#firstname').val();
-                let soyisim = $('#lastname').val();
-                let email = $('#Email').val();
-                let phone1 = $('#Phone1').val();
-                let phone2 = $('#Phone2').val();
-                let searchingText = $('#select').val();
+    function veriAl() {
+        let isim = $('#firstname').val();
+        let soyisim = $('#lastname').val();
+        let email = $('#Email').val();
+        let phone1 = $('#Phone1').val();
+        let phone2 = $('#Phone2').val();
+        let searchingText = $('#select').val();
 
-                return {
-                    isim,
-                    soyisim,
-                    email,
-                    phone1,
-                    phone2,
-                    searchingText
-                };
-            }
+        return {
+            isim,
+            soyisim,
+            email,
+            phone1,
+            phone2,
+            searchingText
+        };
+    }
 
-            $('#add').on('click', function () {
-                //let kontaktname = veriAl.isim;
-                //addNewContact(kontaktname);
-                let kontakt = veriAl();
-                kontaktlariSonsuzaKadarKaydet(kontakt);
-                sortContacts(kontakt);
-                kayitliKontaktlariGetir(kontakt);
-                kontaktlariEkranaYaz(kontakt);
+    $('#add').on('click', function () {
+        //let kontaktname = veriAl.isim;
+        //addNewContact(kontaktname);
+        let kontakt = veriAl();
+        kontaktlariSonsuzaKadarKaydet(kontakt);
+        sortContacts(contacts);
+        let kontaktlar = localStorage.data;
+        kayitliKontaktlariGetir(kontaktlar);
+        kontaktlariEkranaYaz(kontakt);
 
-            });
+    });
 
 
-            $('#save').on('click', function () {
+    $('#save').on('click', function () {
 
-            });
+    });
 
-            $('#delete').on('click', function () {
+    $('#delete').on('click', function () {
 
-            });
+    });
 
-            function kayitliKontaktlariGetir(kontakt){
-                for(let i=0; i< localStorage.length; i++){
-                    let kayitliKontaktlar = sonuclariGetir(kontakt);
-                    return kayitliKontaktlar;
-                }
-              
-            }
+    function kayitliKontaktlariGetir(kontakt) {
+        for (let i = 0; i < localStorage.length; i++) {
+            let kayitliKontaktlar = sonuclariGetir(kontakt);
+            return kayitliKontaktlar;
+        }
 
-            function kontaktSonuclari(kontakt){
-                let kontaktsString = localStorage.getItem(isim);
-                let reportsOfKontakts = JSON.parse(kontaktsString);
-                return reportsOfKontakts;
-            }
+    }
 
-            function kontaktlariEkranaYaz(kontakt) {
-                let kontaktDataYapisi = [{
-                        label: "Isim",
-                        data: kontakt.isim
-                    },
-                    {
-                        label: "Soyisim",
-                        data: kontakt.soyisim
-                    },
-                    {
-                        label: "Email",
-                        data: kontakt.email
-                    },
-                   
-                ];
+    function kontaktSonuclari(kontakt) {
+        let kontaktsString = localStorage.getItem(isim);
+        let reportsOfKontakts = JSON.parse(kontaktsString);
+        return reportsOfKontakts;
+    }
 
-                let rows = [];
-                for (let i = 0; i < kontaktDataYapisi.length; i++) {
-                    rows.push(`
+    function kontaktlariEkranaYaz(kontakt) {
+        let kontaktDataYapisi = [{
+                label: "Isim",
+                data: kontakt.isim
+            },
+            {
+                label: "Soyisim",
+                data: kontakt.soyisim
+            },
+            {
+                label: "Email",
+                data: kontakt.email
+            },
+
+        ];
+
+        let rows = [];
+        for (let j = 0; j < localStorage.length; j++) {
+            for (let i = 0; i < kontaktDataYapisi.length; i++) {
+                rows.push(`
                         <td>${kontaktDataYapisi[i].data}</td>
                         `);
-                    }
-                    $('td').html(rows.join(""));  
-                    return kontaktDataYapisi;
-                }
+            }
+            $('td').html(rows.join(""));
+            return kontaktDataYapisi;
+        }
+    }
 
-                
-               
 
-            })
+
+
+})

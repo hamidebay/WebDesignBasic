@@ -16,8 +16,10 @@ function kontaktlariSonsuzaKadarKaydet(kontakt)
 }
 
 function sonuclariGetir(kontakt){
+    for(let i=0; i<localStorage.length; i++){
     let kontakssString = localStorage.getItem(isim);
     let reportsOfKontakts = JSON.parse(kontakssString);
 
     return reportsOfKontakts;
+    }
 }

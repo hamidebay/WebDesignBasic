@@ -4,7 +4,7 @@ let Email = null;
 let Phone1 = null;
 let Phone2 = null;
 
-
+test
 let contacts = ["hamide", "bay", "tuncay", "ebrar", "erhan", "erhan"];
 
 function deleteContact(isim) {

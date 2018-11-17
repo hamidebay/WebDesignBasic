@@ -74,7 +74,7 @@ $(document).ready(() => {
         return reportsOfKontakts;
     }
 
-    function kontaktlariEkranaYaz(kontakt) {
+    function kontaktlariEkranaYaz(kontaktlar) {
         let kontaktDataYapisi = [{
                 label: "Isim",
                 data: kontakt.isim
@@ -91,7 +91,7 @@ $(document).ready(() => {
         ];
 
         let rows = [];
-        for (let j = 0; j < localStorage.length; j++) {
+        for (let j = 0; j < kontaktlar.length; j++) {
             for (let i = 0; i < kontaktDataYapisi.length; i++) {
                 rows.push(`
                         <td>${kontaktDataYapisi[i].data}</td>

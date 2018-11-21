@@ -19,6 +19,22 @@ UI Interactions:
 
 
 
+
+function renderList(kontaktListesi){
+
+
+ // for(let i=0; i<localStorage.length; i++){
+let koList = kontaktListesi.map((kontaktObject) => ` <td>${kontaktObject.isim}</td>
+                                                    <td>${kontaktObject.soyisim}</td>
+                                                    <td>${kontaktObject.email}</td>
+                                                    <break>
+`);
+
+$("td").html(koList.join("\n"));
+}
+
+
+
 $(document).ready(() => {
 
     function veriAl() {
@@ -43,12 +59,14 @@ $(document).ready(() => {
         //let kontaktname = veriAl.isim;
         //addNewContact(kontaktname);
         let kontakt = veriAl();
-        kontaktlariSonsuzaKadarKaydet(kontakt);
+        let reportsOfKontakts = listeyeKontaktEkle(kontakt);
+        renderList(reportsOfKontakts);
+       /* kontaktlariSonsuzaKadarKaydet(kontakt);
         sortContacts(contacts);
         let kontaktlar = localStorage.data;
         kayitliKontaktlariGetir(kontaktlar);
         kontaktlariEkranaYaz(kontakt);
-
+*/
     });
 
 
@@ -60,48 +78,36 @@ $(document).ready(() => {
 
     });
 
-    function kayitliKontaktlariGetir(kontakt) {
+
+    function editContact(kontakt){
+    $('td').on('click', function () {
+        $('#firstname').html(this.isim);
+        $('#lastname').html(this.soyisim);
+        $('#Email').html(this.email);
+        $('#Phone1').html(this.phone1);
+        $('#Phone2').html(this.phone2);
+
+        let newName = isim;
+        let newLastName = soyisim;
+        let newEmail = email;
+        let newPhone1 = phone1;
+        let newPhone2 = phone2;
+        updateContact(kontakt);
+
+        return {isim, soyisim, email, phone1, phone2};
+
+    })}
+
+    /*function kayitliKontaktlariGetir(kontakt) {
         for (let i = 0; i < localStorage.length; i++) {
             let kayitliKontaktlar = sonuclariGetir(kontakt);
             return kayitliKontaktlar;
-        }
+        } }
+*/
+   
 
-    }
 
-    function kontaktSonuclari(kontakt) {
-        let kontaktsString = localStorage.getItem(isim);
-        let reportsOfKontakts = JSON.parse(kontaktsString);
-        return reportsOfKontakts;
-    }
-
-    function kontaktlariEkranaYaz(kontaktlar) {
-        let kontaktDataYapisi = [{
-                label: "Isim",
-                data: kontakt.isim
-            },
-            {
-                label: "Soyisim",
-                data: kontakt.soyisim
-            },
-            {
-                label: "Email",
-                data: kontakt.email
-            },
-
-        ];
-
-        let rows = [];
-        for (let j = 0; j < kontaktlar.length; j++) {
-            for (let i = 0; i < kontaktDataYapisi.length; i++) {
-                rows.push(`
-                        <td>${kontaktDataYapisi[i].data}</td>
-                        `);
-            }
-            $('td').html(rows.join(""));
-            return kontaktDataYapisi;
-        }
-    }
-
+ 
 
 
 

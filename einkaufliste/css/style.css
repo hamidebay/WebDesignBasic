@@ -1,0 +1,59 @@
+
+
+section:first-child{
+    line-height: 4;
+}
+
+input[type=text]{
+    width: 300px;
+    height: 30px;
+    font-size: 18px;
+    color: brown;
+}
+input[type=image]{
+    width: 25px;
+    position: relative;
+    top:7px
+}
+
+li{
+    font-size: 18px;
+    height: 30px;
+    transition: all 0.4s;
+    padding: 5px 0px;
+    cursor: pointer;
+    width: 295px;
+    background:#f1f1f1;
+    margin-bottom: 2px;
+}
+li:hover{
+    background: aliceblue;
+}
+
+li:hover sup{
+    display: inline;
+}
+
+sup{
+    display:none;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 10px;
+    width: 20px;
+    height: 20px;
+    background: red;
+    float:right;
+    color: red;
+    font-weight: bolder;
+    text-align: center;
+    transition: all 0.3s
+}
+
+sup:hover{
+    cursor: pointer;
+    color: #fff;
+}
+
+.finished{
+    text-decoration: line-through;
+    color: #aaa
+}

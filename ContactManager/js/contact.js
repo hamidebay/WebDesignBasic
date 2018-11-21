@@ -1,13 +1,7 @@
-let isim = null;
-let soyisim = null;
-let Email = null;
-let Phone1 = null;
-let Phone2 = null;
 
-//Array zum testen der Funktionen
-let contacts = ["hamide", "bay", "tuncay", "ebrar", "erhan", "erhan"];
 
-function deleteContact(isim) {
+
+function deleteContact(kontakt) {
 
     for (let i = 0; i < contacts.length; i++) {
         if (contacts[i] === isim) {
@@ -18,12 +12,26 @@ function deleteContact(isim) {
 }
 
 function updateContact(person) {
+    let kontaktsString = localStorage.getItem("kontaktListesi");
+    let reportsOfKontakts = JSON.parse(kontaktsString);
+
+    reportsOfKontakts.unshift({
+        "isim": person.isim,
+        "soyisim" : person.soyisim,
+        "email" : person.email,
+        "telefon" : person.phone1,
+        "telefon" : person.phone2
+});
+
+    kontaktsString = JSON.stringify(reportsOfKontakts);
+    localStorage.setItem("kontaktListesi", kontaktsString);
+    sortContacts(reportsOfKontakts);
 
 }
 
-function sortContacts(contacts) {
-    contacts.sort();
-    return contacts;
+function sortContacts(reportsOfKontakts) {
+    reportsOfKontakts.sort();
+    return reportsOfKontakts;
 }
 
 function searchingText(text) {
@@ -48,14 +56,40 @@ function searchSomething() {
 
 function validateInputs(input) {}
 
-function getAllContacts(contacts) {
-    return contacts;
+function getAllContacts(reportsOfKontakts) {
+    
+    return reportsOfKontakts;
 }
 
-sortContacts(contacts);
+function listeyeKontaktEkle(birKontakt) {
+    let kontaktsString = localStorage.getItem("kontaktListesi");
+    let reportsOfKontakts = JSON.parse(kontaktsString);
+ 
+    if(reportsOfKontakts == undefined){
+        reportsOfKontakts = new Array();
+    }
+
+    reportsOfKontakts.unshift({
+            "isim": birKontakt.isim,
+            "soyisim" : birKontakt.soyisim,
+            "email" : birKontakt.email,
+            "telefon" : birKontakt.phone1,
+            "telefon" : birKontakt.phone2
+    });
+
+    kontaktsString = JSON.stringify(reportsOfKontakts);
+    localStorage.setItem("kontaktListesi", kontaktsString);
+    console.log(reportsOfKontakts);
+
+    return reportsOfKontakts;
+}
+
+
+/*sortContacts(contacts);
 console.log(contacts);
 
 deleteContact("hamide");
 console.log(contacts);
 
 searchSomething();
+*/

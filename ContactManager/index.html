@@ -10,16 +10,15 @@
     <link rel="stylesheet" href="css/style.css">
 
 
-    <script
-        src="https://code.jquery.com/jquery-3.3.1.min.js" ></script>
-      
-    
-      
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/controller.js"></script>
+
+
 
 
 </head>
 
-<body>
+<body >
     <main>
         <section id="left">
             <nav><input id="select" type="search" placeholder="Search">
@@ -27,20 +26,29 @@
 
             <table>
                 <thead>
-                    <tr>
+                    <tr id="first">
                         <div id="table">
-                        <th>Firstname</th>
-                        <th>Lastname</th>
-                        <th>Email</th></div>
-                        <br>
-                        <td id="1"></td>
-                        <br>
-                      
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                            <th>Email</th>
 
-                     
+                        </div>
+
+                    </tr>
+
+                    <tr id="second" >
+                        <div id="contacts">
+                            <td></td>
+                        </div>
+                    </tr>
+
+
+
+
                     </tr>
                 </thead>
             </table>
+
         </section>
         <section id="right">
             <form>
@@ -67,8 +75,8 @@
         </section>
     </main>
 
-    <script src = "js/contact.js"></script>
-    <script src = "js/controller.js"></script>
+    <script src="js/contact.js"></script>
+    
 
 </body>
 

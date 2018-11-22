@@ -11,16 +11,16 @@ function deleteContact(kontakt) {
     return contacts;
 }
 
-function updateContact(person) {
+/*function updateContact() {
     let kontaktsString = localStorage.getItem("kontaktListesi");
     let reportsOfKontakts = JSON.parse(kontaktsString);
 
     reportsOfKontakts.unshift({
-        "isim": person.isim,
-        "soyisim" : person.soyisim,
-        "email" : person.email,
-        "telefon" : person.phone1,
-        "telefon" : person.phone2
+        "isim": veriAl().isim,
+        "soyisim" : veriAl().soyisim,
+        "email" : veriAl().email,
+        "telefon" : veriAl().phone1,
+        "telefon" : veriAl().phone2
 });
 
     kontaktsString = JSON.stringify(reportsOfKontakts);
@@ -28,7 +28,7 @@ function updateContact(person) {
     sortContacts(reportsOfKontakts);
 
 }
-
+*/
 function sortContacts(reportsOfKontakts) {
     reportsOfKontakts.sort();
     return reportsOfKontakts;
@@ -56,10 +56,16 @@ function searchSomething() {
 
 function validateInputs(input) {}
 
-function getAllContacts(reportsOfKontakts) {
+/*function getAllContacts() {
     
-    return reportsOfKontakts;
+    let kontaktsString = localStorage.getItem("kontaktListesi");
+    let reportsOfKontakts = JSON.parse(kontaktsString);
+
+    let newArray = [];
+    newArray.push({"isim" : reportsOfKontakts.isim, "soyisim" : reportsOfKontakts.soyisim, "email" : reportsOfKontakts.email})
+    return newArray;
 }
+*/
 
 function listeyeKontaktEkle(birKontakt) {
     let kontaktsString = localStorage.getItem("kontaktListesi");

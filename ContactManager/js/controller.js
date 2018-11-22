@@ -20,22 +20,34 @@ UI Interactions:
 
 
 
-function renderList(kontaktListesi){
 
-
- // for(let i=0; i<localStorage.length; i++){
-let koList = kontaktListesi.map((kontaktObject) => ` <td>${kontaktObject.isim}</td>
-                                                    <td>${kontaktObject.soyisim}</td>
-                                                    <td>${kontaktObject.email}</td>
-                                                    <break>
-`);
-
-$("td").html(koList.join("\n"));
-}
 
 
 
 $(document).ready(() => {
+
+ function getAllContacts(){
+        let kontakt = veriAl();
+        let reportsOfKontakts = listeyeKontaktEkle(kontakt);
+        renderList(reportsOfKontakts);
+
+};
+
+    function renderList(kontaktListesi) {
+        let koList = null;
+
+        // for(let i=0; i<localStorage.length; i++){
+        koList = kontaktListesi.map((kontaktObject) => `<tr id="second"><div id="contacts">
+                                                           <td>${kontaktObject.isim}</td>
+                                                           <td>${kontaktObject.soyisim}</td>
+                                                           <td>${kontaktObject.email}</td>
+                                                           </div>
+                                                         </tr>
+                                                     
+       `);
+        $("tr").html(koList.join(""));
+
+    }
 
     function veriAl() {
         let isim = $('#firstname').val();
@@ -55,23 +67,18 @@ $(document).ready(() => {
         };
     }
 
+
     $('#add').on('click', function () {
-        //let kontaktname = veriAl.isim;
-        //addNewContact(kontaktname);
+
         let kontakt = veriAl();
         let reportsOfKontakts = listeyeKontaktEkle(kontakt);
         renderList(reportsOfKontakts);
-       /* kontaktlariSonsuzaKadarKaydet(kontakt);
-        sortContacts(contacts);
-        let kontaktlar = localStorage.data;
-        kayitliKontaktlariGetir(kontaktlar);
-        kontaktlariEkranaYaz(kontakt);
-*/
+
     });
 
 
     $('#save').on('click', function () {
-
+        // updateContact(person);
     });
 
     $('#delete').on('click', function () {
@@ -79,24 +86,32 @@ $(document).ready(() => {
     });
 
 
-    function editContact(kontakt){
-    $('td').on('click', function () {
-        $('#firstname').html(this.isim);
-        $('#lastname').html(this.soyisim);
-        $('#Email').html(this.email);
-        $('#Phone1').html(this.phone1);
-        $('#Phone2').html(this.phone2);
+    function editContact() {
+        $('#firstname').on('click', function () {
+            $('#firstname').html(this.isim);
+            $('#lastname').html(this.soyisim);
+            $('#Email').html(this.email);
+            $('#Phone1').html(this.phone1);
+            $('#Phone2').html(this.phone2);
 
-        let newName = isim;
-        let newLastName = soyisim;
-        let newEmail = email;
-        let newPhone1 = phone1;
-        let newPhone2 = phone2;
-        updateContact(kontakt);
+            let newName = veriAl().isim;
+            let newLastName = veriAl().soyisim;
+            let newEmail = veriAl().email;
+            let newPhone1 = veriAl().phone1;
+            let newPhone2 = veriAl().phone2;
+            //updateContact();
 
-        return {isim, soyisim, email, phone1, phone2};
+            return {
+                newName,
+                newLastName,
+                newEmail,
+                newPhone1,
+                newPhone2
+            };
 
-    })}
+        })
+    }
+    editContact();
 
     /*function kayitliKontaktlariGetir(kontakt) {
         for (let i = 0; i < localStorage.length; i++) {
@@ -104,10 +119,10 @@ $(document).ready(() => {
             return kayitliKontaktlar;
         } }
 */
-   
 
 
- 
+
+
 
 
 

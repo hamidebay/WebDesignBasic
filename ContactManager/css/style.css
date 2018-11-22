@@ -68,9 +68,10 @@ input{
     justify-content: flex-end;
 
 }
-tr div + td{
-    display: flex;
-    flex-direction: column;
+td{
+    width: 100px;
 }
+
+#table{width: 100px;}
 
 

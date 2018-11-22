@@ -26,19 +26,19 @@ UI Interactions:
 
 $(document).ready(() => {
 
- function getAllContacts(){
+    function getAllContacts() {
         let kontakt = veriAl();
         let reportsOfKontakts = listeyeKontaktEkle(kontakt);
         renderList(reportsOfKontakts);
 
-};
+    };
 
     function renderList(kontaktListesi) {
-        let koList = null;
+        let koList = [];
 
         // for(let i=0; i<localStorage.length; i++){
         koList = kontaktListesi.map((kontaktObject) => `<tr id="second"><div id="contacts">
-                                                           <td>${kontaktObject.isim}</td>
+                                                           <td id=""kontakt_"${koList.indexOf(this)}">${kontaktObject.isim}</td>
                                                            <td>${kontaktObject.soyisim}</td>
                                                            <td>${kontaktObject.email}</td>
                                                            </div>
@@ -86,44 +86,77 @@ $(document).ready(() => {
     });
 
 
-    function editContact() {
-        $('#firstname').on('click', function () {
-            $('#firstname').html(this.isim);
-            $('#lastname').html(this.soyisim);
-            $('#Email').html(this.email);
-            $('#Phone1').html(this.phone1);
-            $('#Phone2').html(this.phone2);
+    function getKontaktFromList() {
+        /*$('#second').on('click', function(){
+            let datesOfKontakt = {"isim":this.isim, "soyisim": this.soyisim, "email": this.email, "phone1": this.phone1, "phone2": this.phone2};
+            return datesOfKontakt;
+*/
+        printKontaktOnScreen(dates);
+        return Array.from($("#second"))
+            .map(function (inputElm) {
+                return {
+                    index: +$(inputElm).attr("id").replace("contact_", ""),
+                    isim: $(inputElm).val(),
+                    soyisim: $(inputElm).val(),
+                    email: $(inputElm).val(),
+                    phone1: $(inputElm).val(),
+                    phone2: $(inputElm).val(),
+                };
+            });
 
-            let newName = veriAl().isim;
-            let newLastName = veriAl().soyisim;
-            let newEmail = veriAl().email;
-            let newPhone1 = veriAl().phone1;
-            let newPhone2 = veriAl().phone2;
-            //updateContact();
-
-            return {
-                newName,
-                newLastName,
-                newEmail,
-                newPhone1,
-                newPhone2
-            };
-
-        })
     }
-    editContact();
 
-    /*function kayitliKontaktlariGetir(kontakt) {
-        for (let i = 0; i < localStorage.length; i++) {
-            let kayitliKontaktlar = sonuclariGetir(kontakt);
-            return kayitliKontaktlar;
-        } }
+
+    function printKontaktOnScreen(datesOfKontakt) {
+
+        $(`#contact_${renderList.koList.indexOf(this)}`).on('click', function () {
+            $('#firstname').html(datesOfKontakt.isim);
+        })
+
+    }
+    // let kontaktsString = localStorage.getItem("kontaktListesi");
+    // let reportsOfKontakts = JSON.parse(kontaktsString);
+    /*   let selectedContakt = $('#second').on('click', function () {
+           let kontaktdates = updateContact(edittedContact)()
+
+            $('#firstname').html(editContact.name);
+            $('#lastname').html(lastname);
+            $('#Email').html(email);
+            $('#Phone1').html(phone1);
+            $('#Phone2').html(phone2);
+
+        });
+        let newName = veriAl().isim;
+        let newLastName = veriAl().soyisim;
+        let newEmail = veriAl().email;
+        let newPhone1 = veriAl().phone1;
+        let newPhone2 = veriAl().phone2;
+
+       // kontaktsString = JSON.stringify(reportsOfKontakts);
+       // localStorage.setItem("kontaktListesi", kontaktsString);
+        
+        return {
+            newName,
+            newLastName,
+            newEmail,
+            newPhone1,
+            newPhone2
+        };
+
+    editContact(editingContact);
+    }
+
+        $('save').on('click', function(){
+    
+        updateContact(edittedContact);
+    })
+    }
+    
 */
 
 
-
-
-
-
-
-})
+    //editContact();
+   //printKontaktOnScreen();
+    getAllContacts();
+    //selectContaktFromList();
+});

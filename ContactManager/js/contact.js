@@ -2,35 +2,11 @@
 
 
 function deleteContact(kontakt) {
-
-    for (let i = 0; i < contacts.length; i++) {
-        if (contacts[i] === isim) {
-            contacts.splice(i, 1);
-        }
-    }
-    return contacts;
+    
+  
 }
 
 function updateContact(edittedContact) {
-    let kontaktsString = localStorage.getItem("kontaktListesi");
-    let reportsOfKontakts = JSON.parse(kontaktsString);
-    let name = reportsOfKontakts.this.name;
-    let lastname = reportsOfKontakts.soyisim;
-    let email = reportsOfKontakts.email;
-    let phone1 = reportsOfKontakts.phone1;
-    let phone2 = reportsOfKontakts.phone2;
-    
-    reportsOfKontakts.unshift({
-        "isim": edittedContact.newName,
-        "soyisim" : edittedContact.newLastName,
-        "email" : edittedContact.newEmail,
-        "telefon" : edittedContact.newPhone1,
-        "telefon" : edittedContact.newPhone2
-});
-
-    kontaktsString = JSON.stringify(reportsOfKontakts);
-    localStorage.setItem("kontaktListesi", kontaktsString);
-    sortContacts(reportsOfKontakts);
 
 }
 
@@ -63,16 +39,6 @@ function searchSomething() {
 
 function validateInputs(input) {}
 
-/*function getAllContacts() {
-    
-    let kontaktsString = localStorage.getItem("kontaktListesi");
-    let reportsOfKontakts = JSON.parse(kontaktsString);
-
-    let newArray = [];
-    newArray.push({"isim" : reportsOfKontakts.isim, "soyisim" : reportsOfKontakts.soyisim, "email" : reportsOfKontakts.email})
-    return newArray;
-}
-*/
 
 function listeyeKontaktEkle(birKontakt) {
     let kontaktsString = localStorage.getItem("kontaktListesi");
@@ -97,12 +63,3 @@ function listeyeKontaktEkle(birKontakt) {
     return reportsOfKontakts;
 }
 
-
-/*sortContacts(contacts);
-console.log(contacts);
-
-deleteContact("hamide");
-console.log(contacts);
-
-searchSomething();
-*/

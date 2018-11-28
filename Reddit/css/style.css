@@ -1,0 +1,100 @@
+main {
+    margin-left: 20%;
+    width: 60%;
+}
+
+header {
+    display: flex;
+    height: 35px;
+    border: 1px solid black;
+    border-radius: 10px;
+    flex-direction: row;
+}
+
+#login-area {
+    height: 25px;
+    display: flex;
+    padding: 5px;
+    justify-content: space-around;
+    
+
+}
+
+a {
+    padding: 10px;
+}
+
+main+section {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+#topic {
+    display: flex;
+    border: 1px solid;
+    margin-top: 20px;
+    padding: 5px;
+}
+
+#topic-name {
+    height: 20px;
+}
+
+#post-Container {
+    display: flex;
+    border: 1px solid;
+    margin-top: 20px;
+    padding: 5px;
+}
+
+#topic-container{
+    display: block;
+    border: 1px solid;
+    margin-top: 20px;
+    padding: 5px;
+  
+}
+
+#showHideCommentsBtn{
+    padding: 5px;
+}
+
+#hideCommentsBtn{
+    margin-left: 10px;
+}
+
+#comments-field{
+    width: 60%;
+    float: right;
+}
+
+section{background-color: #f3f3f3;
+border-radius: 10px;}
+
+button{
+    background-color: lightblue;
+    border-radius: 10px;
+}
+
+#newUserBtn{display: flex;
+justify-content: flex-end;
+margin-right: 15px;
+margin-left: 15px;
+}
+
+#password{
+    margin-left: 15px;
+}
+
+form{
+    height: 25px;
+}
+
+#newTopicBtn{
+    margin-left: 10%;
+}
+
+#topic-name{
+    margin-left: 10%;
+}

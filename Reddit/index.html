@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reddit</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <main>
+        
+        <header>
+            <div id="login-area"> 
+            <input type="text" id="Benutzername" placeholder="Benutzername"/>
+            <input type="password" id="password" placeholder="Passwort"/>
+            <button id="newUserBtn">New User</button>
+            <form>
+                  
+                <select>
+                    <option id="">User</option>
+                </select>
+            </form>
+        </div>
+        </header>
+        <h3>MyRedditStream</h3>
+        <section id="topic">
+            <div id="topic-header"><a href="">Travel</a><a href="">Art</a><a href="">Movie</a></div>
+            <input type="text" id="topic-name" placeholder="new Topic" />
+            <button id="newTopicBtn">Add Topic</button>
+        </section>
+
+        <section id="post-Container">
+            <div id="post-line1">
+                <input type="text" id="post-Title"  placeholder="Title"/>
+                <input type="image" src="" alt="">
+                <form>
+                  
+                    <select>
+                        <option id="">Category</option>
+                    </select>
+                </form>
+            </div>
+            <div id="post-line2">
+                <input type="text" id="post-Message" placeholder="Message" />
+                <button id="newPostBtn">New Post</button>
+            </div>
+        </section>
+
+        <section id="topic-container">
+            <p id="topic-text">Travel</p>
+            <p id="user-name">Hamide</p>
+            <h2>Heading</h2>
+            <p id="posted-Message">Lorem ipsum</p>
+            <div id="comment-line">
+                <input type="text" id="post-Comment" /> 
+                <button id="newCommentBtn">Comment</button>
+            </div>
+            <div id="showHideCommentsBtn">
+            <button id="showCommentsBtn">Show Comments</button><button id="hideCommentsBtn">Hide Comments</button>
+        </div>
+            <hr>
+            <div id="comments-field">
+                <h3>Username</h3>
+                <hr>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="js/model.js"></script>
+    <script src="js/controller.js"></script>
+</body>
+
+</html>

@@ -20,8 +20,8 @@
 
         <header>
             <div id="login-area">
-                <input type="text" id="Benutzername" placeholder="Benutzername" />
-                <input type="password" id="password" placeholder="Passwort" />
+                <input type="text" id="Benutzername" class="loginDates" placeholder="Benutzername" />
+                <input type="password" id="password" class="loginDates" placeholder="Passwort" />
                 <button id="newUserBtn">New User</button>
                 <form>
 
@@ -42,7 +42,7 @@
             <div id="post-line1">
                 <input type="text" id="post-Title" placeholder="Title" />
                 <input type="image" src="" alt="">
-                <form>
+                <form id="Category">
 
                     <select>
                         <option id="">Category</option>
@@ -59,9 +59,16 @@
             <p id="topic-text">Travel</p>
             <p id="user-name">Hamide</p>
             <h2>Heading</h2>
+            <div id="post-area">
+            <div id="voting-area">
+            <button id="voting-up" class="voting">&#8896</button>
+            <br>
+            <button id="voting-down" class="voting">&#8897</button>
+        </div>
             <p id="posted-Message">Lorem ipsum</p>
+        </div>
             <div id="comment-line">
-                <input type="text" id="post-Comment" />
+                <input type="text" id="post-Comment" placeholder="Write some comments"/>
                 <button id="newCommentBtn">Comment</button>
             </div>
             <div id="showHideCommentsBtn">

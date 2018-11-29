@@ -19,6 +19,10 @@ header {
 
 }
 
+.loginDates{
+    width: 20%;
+}
+
 a {
     padding: 10px;
 }
@@ -38,18 +42,26 @@ main+section {
 
 #topic-name {
     height: 20px;
+    width: 22%;
 }
 
 #post-Container {
     display: block;
     border: 1px solid;
     margin-top: 20px;
-    padding: 5px;
+    padding: 10px;
     justify-content: space-around;
 }
 
-#post-line1{display: flex;}
-#post-line2{display: flex;}
+#post-line1{display: flex;
+}
+#post-line2{display: flex; }
+
+#post-Message{
+    min-height: 40px;
+    width: 70%;
+    margin-top: 10px;
+}
 
 #topic-container {
     display: block;
@@ -78,8 +90,10 @@ section {
 }
 
 button {
-    background-color: lightskyblue;
+    background-color: #3D8BCD;
     border-radius: 5px;
+    height: 20px;
+    color: white;
 }
 
 #newUserBtn {
@@ -95,7 +109,7 @@ button {
 
 form {
     height: 25px;
-}
+ }
 
 #newTopicBtn {
     margin-left: 10%;
@@ -104,3 +118,63 @@ form {
 #topic-name {
     margin-left: 10%;
 }
+
+#newPostBtn{
+    margin-top: 20px;
+    margin-left: 10%;
+}
+
+#Category{display: flex;
+    justify-content: flex-end;
+    margin-left: 40%;
+    height: 25px;
+
+}
+
+#post-Comment{
+    width: 70%;
+}
+
+#newCommentBtn{
+    margin-left: 10%;
+}
+
+#hideCommentsBtn, #showCommentsBtn{
+    margin-left: 5%;
+    background-color: #E1D6E6;
+    color: black;
+}
+
+#topic-text{
+    color: blue;
+    font-size: 10px;
+}
+
+#user-name{
+    color: red;
+    ont-size: 12px;
+}
+
+#post-area{
+    display: flex;
+}
+
+#posted-Message{
+    margin-left: 20px;
+}
+
+#voting-up{ 
+    background-color: green;
+    color: white;
+    font-weight: bold;
+}
+
+#voting-down{
+    background-color: red;
+    color: white; 
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+

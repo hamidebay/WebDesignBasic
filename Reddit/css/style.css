@@ -16,7 +16,6 @@ header {
     display: flex;
     padding: 5px;
     justify-content: space-around;
-    
 
 }
 
@@ -42,59 +41,66 @@ main+section {
 }
 
 #post-Container {
-    display: flex;
-    border: 1px solid;
-    margin-top: 20px;
-    padding: 5px;
-}
-
-#topic-container{
     display: block;
     border: 1px solid;
     margin-top: 20px;
     padding: 5px;
-  
+    justify-content: space-around;
 }
 
-#showHideCommentsBtn{
+#post-line1{display: flex;}
+#post-line2{display: flex;}
+
+#topic-container {
+    display: block;
+    border: 1px solid;
+    margin-top: 20px;
+    padding: 5px;
+
+}
+
+#showHideCommentsBtn {
     padding: 5px;
 }
 
-#hideCommentsBtn{
+#hideCommentsBtn {
     margin-left: 10px;
 }
 
-#comments-field{
+#comments-field {
     width: 60%;
     float: right;
 }
 
-section{background-color: #f3f3f3;
-border-radius: 10px;}
-
-button{
-    background-color: lightblue;
+section {
+    background-color: #f3f3f3;
     border-radius: 10px;
 }
 
-#newUserBtn{display: flex;
-justify-content: flex-end;
-margin-right: 15px;
-margin-left: 15px;
+button {
+    background-color: lightskyblue;
+    border-radius: 5px;
 }
 
-#password{
+#newUserBtn {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 15px;
     margin-left: 15px;
 }
 
-form{
+#password {
+    margin-left: 15px;
+}
+
+form {
     height: 25px;
 }
 
-#newTopicBtn{
+#newTopicBtn {
     margin-left: 10%;
 }
 
-#topic-name{
+#topic-name {
     margin-left: 10%;
 }

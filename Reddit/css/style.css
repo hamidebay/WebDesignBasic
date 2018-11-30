@@ -152,6 +152,14 @@ form {
     font-size: 10px;
 }
 
+#count{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    border: 1px solid;
+    border-radius: 50%;
+ 
+}
 #user-name{
     color: red;
     font-size: 12px;

@@ -1,12 +1,11 @@
-function generateUserOption(userName, passWort) {
+function generateUserOption(userName) {
     let userOptionDataYapisi = [
         {"User": "userName"},
         {"Passwort" : "passWort"}
     ];
 
     let userListe = [];
- 
-    userListe.push(`
+     userListe.push(`
     <select>
         <option>${userName}</option>
     </select>

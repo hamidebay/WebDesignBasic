@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 function kullaniciVerileriniAl(){
     let benutzerName = $('#Benutzername').val();
-    let passWord = $('#Password').val();
+    let passWord = $('#password').val();
     let newUser = new User(benutzerName, passWord);
    // let newUser = new User(benutzerName, passWord); 
     return {benutzerName, passWord}, newUser;
@@ -23,11 +23,14 @@ function topicVerileriniAl(){
 
 
 $('#newUserBtn').on('click', function(){
-let user = kullaniciVerileriniAl().userName;
-let userPasswort = kullaniciVerileriniAl().passWord;
+let data = kullaniciVerileriniAl();
+let user = data.userName;
+let userPasswort = data.passWord;
+//console.log(userPasswort);
 generateUserOption(user);
 let newUser = new User(user, userPasswort);
-newUser.saveInLocalStorage();
+//console.log(JSON.stringify(newUser));
+Storage.saveInLocalStorage(newUser);
 
 //saveInLocalStorage(userObject);
 });

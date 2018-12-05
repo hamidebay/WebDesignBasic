@@ -1,27 +1,35 @@
 $(document).ready(function(){
 
-function veriAl(){
+function kullaniciVerileriniAl(){
     let benutzerName = $('#Benutzername').val();
-    console.log(benutzerName);
     let passWord = $('#Password').val();
-    let newTopic = $('#topic-name').val();
+    let newUser = new User(benutzerName, passWord);
+   // let newUser = new User(benutzerName, passWord); 
+    return {benutzerName, passWord}, newUser;
+}
+
+console.log(localStorage);
+
+function postVerileriniAl(){
     let title = $('#post-Title').val();
     let message = $('#post-Message').val();
     let comment = $('#post-Comment').val();
+}
 
-    getUser(benutzerName, passWord);
-
-    return {benutzerName, passWord, newTopic, title, message, comment};
+function topicVerileriniAl(){
+    let newTopic = $('#topic-name').val();
 }
 
 
 
-
-
 $('#newUserBtn').on('click', function(){
-let benutzer = veriAl().benutzerName;
-let passWord = veriAl().passWord;
-createUser(benutzer, passWord);
+let user = kullaniciVerileriniAl().userName;
+let userPasswort = kullaniciVerileriniAl().passWord;
+generateUserOption(user);
+let newUser = new User(user, userPasswort);
+newUser.saveInLocalStorage();
+
+//saveInLocalStorage(userObject);
 });
 
 $('#newTopicBtn').on('click', function(){

@@ -48,6 +48,11 @@ main+section {
     width: 22%;
 }
 
+#topic-header{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 #post-Container {
     display: block;
     border: 1px solid;

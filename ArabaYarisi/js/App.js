@@ -48,15 +48,15 @@ $(document).ready(() => {
         }
     }
 
-  function generateLanes() {
+    function generateLanes() {
 
-     /*   for (let i = 0; i < veriAl().countLane; i++) {
+        /*   for (let i = 0; i < veriAl().countLane; i++) {
             let lane = "<div> </div>"
             $("raceTrack").append(lane);
         }
 */
         let lanes = [];
-        for(let i=0; i<veriAl().countLane; i++){
+        for (let i = 0; i < veriAl().countLane; i++) {
             lanes.push(`
             <div class="lane">
                 <div class="car"></div>
@@ -65,14 +65,26 @@ $(document).ready(() => {
         }
 
         $('#raceTrack').html(lanes.join(""));
-       
+
+
+
         return lanes;
     }
 
-
+    function playCar(car) {
+        car.moveCar();
+        car.repairCar();
+    }
 
     $("#submit").click(function () {
         generateLanes();
+        $('#raceTrack').append("<button>Start</button>");
     });
+
+    $('button').click(function () {
+        playCar(car1);
+        playCar(car2);
+        playCar(car3);
+    })
 
 });

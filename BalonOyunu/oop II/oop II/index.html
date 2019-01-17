@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IT Club - OOP II</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js"></script>
+</head>
+<body>
+    <h1>Balon Hikayesi</h1>
+    <p>
+        <h3>Requirements (Gereksinimler) - a Use Case</h3>
+        Bir parkta baloncu bir amca olacak ve kullanici kendisine balon sayisini söyleyecek.
+        Daha sonra kullanici "balonlarimi ver" dediginde, baloncu amca, balonlari sirirerek 
+        (bu balonlarin renk ve büyüklüklerininde rastgele secilmis olmasi gerekiyor) kullaniciye verir.
+        Kullanici da balonlari parka dagitir.
+        Kullanici istedigi balonu patlatabilecek. Patlayan balonlar, park cöpcüsü tarafindan toplanacak.
+    </p>
+
+    <ul>
+        <li>Gercekten de böyle bir programa ihtiyac var mi? Baska bir sekilde cözülebilir mi?</li>
+
+        <li>q1) Burada kac nesne adayi var? Bunlar hangileri</li> merve, nurullah
+        <li>q2) Bu nesnelerin kabiliyetleri nelerdir?</li> hamide, taner
+        <li>q3) Aralarindaki iliskiler nelerdir?</li> rabia, sükrü, murat
+    </ul>
+
+    <p>
+        <h3>Analysis (OOA - OOD)</h3>
+        <ul>
+            <li>a1) Park, Baloncu, Balon(lar), Cöpcü, Kullanici</li>
+            <li>a2) 
+                <ol>
+                    <li>Park:
+                        <ul>
+                            <li>Bir alani var</li>
+                            <li>Cöpcüleri olur</li>
+                            <li>Balon sayisini balon durumlarina göre söyleyebilir</li>
+                            <li>Balonlari rastgele dagitma</li>
+                            <li>Istenilen (lokasyon/isim/numarasi) balonu geri verebilir.</li>
+                        </ul>
+                    </li>
+                    <li>Baloncu: 
+                        <ul>
+                            <li>Balon sayisini alabiliyor</li>
+                            <li>Balon sisirebiliyor</li>
+                            <li>Balonlarin rengi ve büyüklüklerini belirleyebilir</li>
+                            <li>Sisirilmis balonlari geri veriyor.</li>
+                            <li><del>Ücretini aliyor</del></li>
+                        </ul>
+                    </li>
+                    <li>Balon:
+                        <ul>
+                            <li>Ebati var</li>
+                            <li>Rengi var</li>
+                            <li>Lokasyon</li>
+                            <li>Durumu [dokunulmamis | sisirilmis | patlamis]</li>
+                            <li><del>ucabilirlik [true | false]</del></li>
+                            <li>Balon patlar</li>
+                            <li>Balon siser</li>
+                            <li>Balon hareket et</li>
+                        </ul>
+                    </li>
+                    <li>Cöpcü:
+                        <ul>
+                            <li><del>Sinirsiz gezme özgürlügü</del></li>
+                            <li>Cöp torbasi</li>
+                            <li>Patlamis balonlari toplar</li>
+                        </ul>
+                    </li>
+                    <li>Kullanici:
+                        <ul>
+                            <li>Balon sayisini söyler</li>
+                            <li>Balon satin alir</li>
+                            <li>Balonlari parka dagit(ti)ir</li>
+                            <li>Balon patlatir</li>
+                        </ul>
+                    </li>
+                </ol>
+            </li>
+            <li>a3)
+                <ol>
+                    <li>Kullanici balonlari baloncudan temin eder</li>
+                    <li>Kullanici balonlari parka dagitir</li>
+                    <li>Baloncu balonlari sisirir</li>
+                    <li>Cöpcü balonlari toplar</li>
+                    <li>Kullanici balonlari (park üzerinden) patlatir</li>
+                    <li>Park balonlarin lokasyonunu belirler</li>
+                </ol>
+            </li>
+        </ul>
+    </p>
+
+</body>
+</html>

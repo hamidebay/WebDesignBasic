@@ -65,8 +65,7 @@ $(document).ready(() => {
         }
 
         $('#raceTrack').html(lanes.join(""));
-        document.getElementById('lanes_modal').showModal();
-        
+       
         return lanes;
     }
 

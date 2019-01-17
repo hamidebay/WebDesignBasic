@@ -1,19 +1,18 @@
 class Car {
     constructor() {
-        let ps;
-        let brokeDownTime;
-        let timeToRepair;
-        let location = [0, 0];
-        
+       
+         this.brokeDownTime;
+         this.timeToRepair;
+         this.location = [0, 0];
+         this.ps = Math.floor((Math.random() * 1000) + 115);
+         this.basicSpeed = 0.1;  //per second
+
     }
 
-    getRandomPS() {
-        let carPs = Math.floor((Math.random() * 1000) + 115);
-        return carPs;
-    }
-
-    calculateBrokeDownTime() {
-       let brokeDownTime;
+   
+    calculateBrokeDownTime(ps) {
+       
+      
         if (ps < 200) {
             brokeDownTime = 6;
         } else if (ps > 200 && ps < 300) {
@@ -29,7 +28,7 @@ class Car {
     }
 
     calculateRepairTime() {
-        let timeToRepair;
+        
         if (ps < 200) {
             timeToRepair = 5;
         } else if (ps > 200 && ps < 300) {
@@ -39,12 +38,25 @@ class Car {
         } else {
             timeToRepair = 2;
         }
-
+        return timeToRepair;
     }
 
-    moveCar(){
+    calculateSpeed() {
+
+        let speed = this.basicSpeed * this.ps;
+        return speed;
+    }
+
+    repairCar() {
+        //do nothing, wait...
+    }
+
+    moveCar() {
         let drive = this.calculateBrokeDownTime();
-        let move =  setInterval(Location.findPosition(elem), drive*1000);
-            
+        let waiting = this.calculateRepairTime();
+        let move = setInterval(Location.findPosition(elem), drive * 1000);
+        clearInterval();
+        let repair = setInterval(this.repairCar, waiting * 1000);
+
     }
 }

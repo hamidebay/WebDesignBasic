@@ -1,27 +1,45 @@
-Bir araba yaris pisti olacak. Pistin kac kulvari olacagini kullanici belirleyecek. Her kulvarda bir araba olacak. Arabalarin belirli özellikleri olacak. 
-Starta basinca arabalar bitis noktasina dogru ilerliyecek. Bitis noktasina ilk ulasan araba yarisi kazanacak.
+<!DOCTYPE html>
+<html lang="de">
 
-1. Yaris pisti:
- - Baslangic ve bitis noktosi olacak
- - Istenilen sayida kulvari olacak.
- - Pistin uzunlugunu kullanicidan alacak.
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript - Araba Yarisi</title>
 
-2. Kulvar: 
- - Esit uzunlukta ve genislikte olacaklar. 
- - Araba basina bir kulvar olacak.
- - Kulvarlarin uzunlugu pistin uzunluguna esit olacak.
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
-3. Araba: 
- - PS i olacak: 115 ile 1000 arasinda random bir sayi olarak belirlenecek.
- - PS arttikca hizlanma süresi kisalacak.
- - Her araba belirli bir süreden sonra bozulacak.
-    - PS arttikca daha cabuk bozulacak.
- - Bozulan araba tamire gidecek:
-    - PS arttikca tamir süresi kisalacak.
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="js/User.js"></script>
+    <script src="js/RaceTrack.js"></script>
+    <script src="js/Lane.js"></script>
+    <script src="js/Car.js"></script>
+    <script src="js/App.js"></script>
+</head>
 
-4. kullanici: 
- - Kac kisinin yarisacagini belirleyecek.
- - Pistin uzunlugunu belirleyecek.
- - Yarisi baslatacak.
+<body>
 
+    <h2>Araba Yarisi</h2>
 
+    <form>
+        Pistin uzunlugu (kilometre):<br>
+        <input id="raceTrackLength" type="number" name="raceTrackLength" value="">
+        <br>
+        Kulvar Sayisi:<br>
+        <input id="countLane" type="number" name="lane" value="">
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <dialog id="lanes_modal">
+        <div id="raceTrack">
+            <div class="lane">
+                    <div class="car"></div>
+            </div>
+        </div>
+    </dialog>
+
+   
+</body>

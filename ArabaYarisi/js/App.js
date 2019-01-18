@@ -27,14 +27,15 @@ Starta basinca arabalar bitis noktasina dogru ilerliyecek. Bitis noktasina ilk u
 */
 
 
-let hamide = new User(3, 500);
-let formula1Pist = new RaceTrack(500, 3);
-let lane1 = new Lane();
+//let hamide = new User(3, 500);
+//let formula1Pist = new RaceTrack(500, 3);
+/*let lane1 = new Lane();
 let lane2 = new Lane();
 let lane3 = new Lane();
 let car1 = new Car();
 let car2 = new Car();
 let car3 = new Car();
+*/
 
 $(document).ready(() => {
 
@@ -50,23 +51,16 @@ $(document).ready(() => {
 
     function generateLanes() {
 
-        /*   for (let i = 0; i < veriAl().countLane; i++) {
-            let lane = "<div> </div>"
-            $("raceTrack").append(lane);
-        }
-*/
         let lanes = [];
-        for (let i = 0; i < veriAl().countLane; i++) {
+        let laneValues = veriAl();
+        for(let i=0; i<laneValues.countLane; i++){
             lanes.push(`
-            <div class="lane">
-                <div class="car"></div>
+            <div id="lane_${i}" class="lane" style="width:${laneValues.trackLength}px">
+                <div id="car_${i}" class="car"></div>
             </div>
             `);
         }
-
         $('#raceTrack').html(lanes.join(""));
-
-
 
         return lanes;
     }
@@ -76,15 +70,28 @@ $(document).ready(() => {
         car.repairCar();
     }
 
+    function generateCars(){
+        let cars = [];
+        let carValues = verial();
+        for(let i=0; i<carValues.countLane; i++){
+            let car = "car" + cars[i];
+            car = new Car();
+            
+            return car;
+        }
+
+        
+    }
+
     $("#submit").click(function () {
         generateLanes();
         $('#raceTrack').append("<button>Start</button>");
     });
 
     $('button').click(function () {
-        playCar(car1);
-        playCar(car2);
-        playCar(car3);
+       // hamide.playCar(generateCars());
+       console.log("test");
+           
     })
 
 });

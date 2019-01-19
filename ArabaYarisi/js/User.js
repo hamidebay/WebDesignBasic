@@ -1,7 +1,11 @@
-class User{
-    constructor(pCountLane, pLength){
-        let name;
+class User {
+    constructor(pCountLane, ) {
+
         this.countLane = pCountLane;
-        this.length = pLength;
+
+    }
+
+    howManyPlayers() {
+        return this.countLane;
     }
 }

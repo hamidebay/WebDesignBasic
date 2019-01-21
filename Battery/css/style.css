@@ -1,20 +1,62 @@
-section {
-    width: 100px;
-    height: 50px;
+#battery-container {
+    background-color: white;
+    height: 150px;
     border: 1px solid black;
     text-align: right;
     vertical-align: top;
+    width: 300px;
 
 }
 
 button {
-    width: 100px;
+    display: flex;
+    text-align: center;
+    width: 120px;
     height: 30px;
-    margin-top: 30px;
+    margin-left: 30%;
+    margin-top: 10px;
+    background-color: #f0f0f0;
 }
 
-div {
-    border: 1px solid red;
+#battery {
+    border: 1px solid gray;
+ 
+    height: 150px;
+}
+
+aside {
+    display: flex;
+    width: 300px;
+}
+
+aside:last-child {
+    justify-content: flex-end;
+}
+
+#battery-deco {
+    justify-content: flex-end;
+    border: 2px solid gray;
+    width: 10px;
     height: 50px;
-    background-color: green;
+    background-color: gray;
+}
+
+#main-section {
+    display: flex;
+    align-items: center;
+}
+
+body {
+    margin-top: 15%;
+    margin-left: 40%;
+}
+
+p {
+    width: 120px;
+    height: 30px;
+    border: 1px solid gray;
+    margin-top: 10px;
+    align-items: center;
+    text-align: center;
+    background-color: #f0f0f0;
 }

@@ -3,14 +3,29 @@ let varta = new BatteryFactory();
 if (varta.getCurrentEnergy() > 0) {
     varta.reduceEnergy();
 
-console.log(varta.getCurrentEnergy());
 }
 
-setInterval(()=> {
-    $('section').html(varta.getCurrentEnergy() + "%");
+setInterval(() => {
+    $('p').html(varta.getCurrentEnergy() + "%");
+    $('#battery').css({
+        "width": varta.getCurrentEnergy() * 3 });
+    $('#battery').html(getColor());
 }, 1000);
 
-$('button').on('click', function () {
-    varta.loadBattery();
-    console.log(varta.getCurrentEnergy());
-});
+function getColor() {
+          if (varta.currentEnergy > 20) {
+            $('#battery').css({
+                "background-color": varta.colorGreen
+            })
+        } else {
+            $('#battery').css({
+                "background-color": varta.colorREd
+            })
+        }}
+     //getColor();
+
+    $('button').on('click', function () {
+        varta.loadBattery();
+        console.log(varta.getCurrentEnergy());
+    })
+
